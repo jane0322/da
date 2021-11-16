@@ -17,8 +17,6 @@ data.head(5)
 ```
 
 
-
-
 <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -90,8 +88,6 @@ data.head(5)
 </div>
 
 
-
-
 ```python
 #数据清洗 
 data.info()
@@ -110,25 +106,17 @@ data.info()
     dtypes: int64(2), object(3)
     memory usage: 11.2+ MB
 
-
-
 ```python
 data.duplicated().sum()
 ```
 
 
-
-
     0
-
-
 
 
 ```python
 data.isnull().sum()
 ```
-
-
 
 
     user_id         0
@@ -139,21 +127,15 @@ data.isnull().sum()
     dtype: int64
 
 
-
-
 ```python
 #查看流量分配比例，新页面和老页面点击比，比例基本一致
 data['group'].value_counts()
 ```
 
 
-
-
     treatment    147276
     control      147202
     Name: group, dtype: int64
-
-
 
 
 ```python
@@ -162,11 +144,7 @@ data[data.landing_page == 'old_page']['converted'].mean()
 ```
 
 
-
-
     0.12047759085568362
-
-
 
 老页面的点击率为12%，假设我们希望新页面能够让点击率至少提升一个百分点，则算得所需最小样本量为16753。147202>16753满足最小样本量需求。
 
@@ -236,11 +214,7 @@ z_alpha
 ```
 
 
-
-
     -1.6448536269514729
-
-
 
 
 ```python
@@ -272,3 +246,4 @@ print('Cohen\'s d为：', d)
 
 分析结论
 Cohen's d的值约为-0.00762，绝对值很小。两者虽有显著性水平5%时统计意义上的显著差异，但差异的效应量很小。可以理解为显著有差异，但差异的大小不显著。
+
